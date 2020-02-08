@@ -1,0 +1,5 @@
+<form method="POST" action="{{ route('verification.resend') }}">
+    @csrf
+
+    <button type="submit">{{ __( "click here to request another email" ) }}</button>
+</form>

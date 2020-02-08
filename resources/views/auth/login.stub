@@ -1,0 +1,19 @@
+@extends('layouts.layout')
+
+@section('body')
+<section>
+    <header>
+        <h2>{{ __( "Sign in" ) }}</h2>
+        <p><a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a></p>
+    </header>
+
+    <p>{{ __( "Don't have a account?" ) }} <a href="{{ route('register') }}">{{ __( "Create One" ) }}</a></p>
+
+    @include('auth.login-form')
+
+    @if (Route::has('password.request'))
+        <p><a href="{{ route('password.request') }}">{{ __( "Forgot Your Password?" ) }}</a></p>
+    @endif
+</section>
+
+@endsection

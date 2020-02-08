@@ -1,0 +1,18 @@
+<form method="POST" action="{{ route('password.confirm') }}">
+    @csrf
+
+    <fieldset>
+        <legend>{{ __( "Account details" ) }}</legend>
+
+        <div>
+            <label for="password">{{ __( "Password" ) }}</label>
+            <input type="password" name="password" id="password" autocomplete="current-password" required />
+
+            @error('password')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+    </fieldset>
+
+    <button type="submit">{{ __( "Confirm Password" ) }}</button>
+</form>

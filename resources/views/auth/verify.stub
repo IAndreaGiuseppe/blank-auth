@@ -1,0 +1,21 @@
+@extends('layouts.layout')
+
+@section('body')
+<section>
+    <header>
+        <h2>{{ __( "Verify Your Email Address' ) }}</h2>
+        <p><a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a></p>
+    </header>
+
+    @if (session('resent'))
+        <p>{{ __( "A fresh verification link has been sent to your email address." ) }}</p>
+    @endif
+
+    <p>{{ __( "Before proceeding, please check your email for a verification link." ) }}</p>
+    <p>{{ __( "If you did not receive the email" ) }}</p>
+
+    @include('auth.verify-form')
+
+</section>
+
+@endsection

@@ -1,0 +1,38 @@
+<form method="POST" action="{{ route('login') }}">
+    @csrf
+
+    <fieldset>
+        <legend>{{ __( "Login" ) }}</legend>
+
+        <div>
+            <label for="email">{{ __( "E-Mail address" ) }}</label>
+            <input type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="email" autofocus required />
+
+            @error('email')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div>
+            <label for="password">{{ __( "Password" ) }}</label>
+            <input type="password" name="password" id="password" autocomplete="current-password" required />
+
+            @error('password')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div>
+            <div>
+                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
+                <label for="remember">{{ __( "Remember me" ) }}</label>
+            </div>
+
+            @error('remember')
+                <p>{{ $message }}</p>
+            @enderror
+        </div>
+    </fieldset>
+
+    <button type="submit">{{ __( "Login" ) }}</button>
+</form>

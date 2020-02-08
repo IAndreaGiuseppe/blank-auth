@@ -1,0 +1,19 @@
+@extends('layouts.layout')
+
+@section('body')
+<section>
+    <header>
+        <h2>{{ __( "Confirm password" ) }}</h2>
+        <p><a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a></p>
+    </header>
+
+    <p>{{ __( "Please confirm your password before continuing." ) }}</p>
+
+    @include('auth.passwords.confirm-form')
+
+    @if (Route::has('password.request'))
+        <a href="{{ route('password.request') }}">{{ __( "Forgot Your Password?" ) }}</a>
+    @endif
+</section>
+
+@endsection

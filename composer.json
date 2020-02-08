@@ -1,0 +1,49 @@
+{
+    "name": "iag/blank-auth",
+    "description": "Laravel authentication views",
+    "keywords": ["laravel", "auth", "views"],
+    "license": "MIT",
+    "homepage": "https://github.com/IAndreaGiuseppe/blank-auth",
+    "support": {
+        "issues": "https://github.com/IAndreaGiuseppe/blank-auth/issues",
+        "source": "https://github.com/IAndreaGiuseppe/blank-auth"
+    },
+    "authors": [
+        {
+            "name": "Andrea Giuseppe Pretto",
+            "email": "info@andreagiuseppe.com",
+            "homepage": "https://andreagiuseppe.com"
+        }
+    ],
+    "require": {
+        "illuminate/console": "^6.0",
+        "illuminate/support": "^6.0",
+        "php": "^7.2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iag\\BlankAuth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iag\\BlankAuth\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iag\\BlankAuth\\BlankAuthServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

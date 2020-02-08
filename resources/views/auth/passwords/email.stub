@@ -1,0 +1,18 @@
+@extends('layouts.layout')
+
+@section('body')
+<section>
+    <header>
+        <h2>{{ __( "Reset password" ) }}</h2>
+        <p><a href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a></p>
+    </header>
+
+    @if (session('status'))
+        <p>{{ session('status') }}</p>
+    @endif
+
+    @include('auth.passwords.email-form')
+
+</section>
+
+@endsection
