@@ -16,7 +16,7 @@ or inside your composer.json:
 
 ```json
 {
-    "iag/blank-auth": "^0.1.0"
+    "iag/blank-auth": "^1.0.0"
 }
 ```
 
